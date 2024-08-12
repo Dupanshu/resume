@@ -10,19 +10,25 @@
 
     <style>
       body {
-          background-color: #ffffff;
-          color: #000000;
+          background-color: #fff;
+          color: #000;
           transition: background-color 0.3s, color 0.3s;
-          height: 100dvh;
-          width: 100vh;
-          margin-inline: auto;
+          height: 100vh;
+          width: 100vw;
+          overflow: hidden;
       }
 
       @media (prefers-color-scheme: dark) {
           body {
-              background-color: #000000;
-              color: #ffffff;
+              background-color: #000;
+              color: #fff;
           }
+      }
+
+      .container {
+        width: min(100% - 30px, 1080px);
+        margin-inline: auto;
+        height: 100%;
       }
 
       iframe {
@@ -32,6 +38,8 @@
   </style>
   </head>
   <body>
-    <iframe src="./Dupanshu_Resume.pdf" frameborder="0"></iframe>
+    <div class="container">
+      <iframe src="./Dupanshu_Resume.pdf" frameborder="0"></iframe>
+    </div>
   </body>
 </html>
